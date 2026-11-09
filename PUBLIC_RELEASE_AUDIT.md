@@ -1,6 +1,12 @@
 # RayPowerMeter public release audit
 
-**Candidate for owner review. Publication on hold.** This preparation follows
+**Publication Status: PUBLIC — Public Engineering Reference — AS-IS**
+
+RayPowerMeter has been published as a source-only engineering reference under [RFStateSide/RayPowerMeter](https://github.com/RFStateSide/RayPowerMeter).
+
+This document preserves the engineering review, verification results, licensing decisions, and publication scope established during release preparation. The findings below represent the prepublication audit and remain part of the project's historical record.
+
+This preparation follows
 RF StateSide Hardware/Software Public-Release Workflow v4. Development history
 remains with `RayJr2/RayPowerMeter` at baseline
 `f56eb30b17429b8f9de191bb96ec69a83b854c78` plus reviewed working-tree changes.
@@ -16,6 +22,8 @@ snapshot.
 | Publication inventory | Source-only scope. The owner cleared the five required ChatGPT-assisted Qt graphics. The 183-path allowlist includes those resources and the six lineage files. Defer Nextion, CAD, historical documents and binaries. [Asset provenance](docs/asset-provenance.md) |
 | Verification | The Windows x64 Qt build, cached ESP32-S3 release build and all three host tests passed from a fresh isolated copy of exactly the 183 allowlisted paths after the owner explicitly confirmed provenance. Dependency caches and generated outputs were outside the source copy. Both image headers report 16 MiB, and the generated partition table has two 1,966,080-byte app slots. The linked default firmware retains the serial server and omits HTTP route registration and the legacy OTA task/downloader. The previous cold-cache attempt stopped at GitHub DNS resolution. Physical performance, integrated device behavior, Nextion and relay/protection operation remain unverified. |
 
-Owner review order is licensing and lineage, graphics and inventory, then
-build, calibration and limitations. Final document and publication acceptance
-remain open. Repository creation and visibility require separate authorization.
+**Post-Publication Status**
+
+The owner-authorized source snapshot has been published in the RFStateSide GitHub organization.
+
+The original engineering verification results, documented limitations, licensing decisions, and source-only publication scope remain applicable. Publication does not introduce additional hardware qualification or change the historical audit findings.
