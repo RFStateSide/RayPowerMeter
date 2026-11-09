@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogSetup</class>
+ <widget class="QDialog" name="DialogSetup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>599</width>
+    <height>475</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Setup</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabMain">
+      <attribute name="title">
+       <string>Main</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutMode">
+         <item>
+          <widget class="QLabel" name="labelConnMode">
+           <property name="text">
+            <string>Mode:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBoxWebSocketMode"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerMode">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonTestConnection">
+         <property name="text">
+          <string>Test Connection</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupSerial">
+         <property name="title">
+          <string>Serial Port</string>
+         </property>
+         <layout class="QGridLayout" name="gridSerial">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelSerialPort">
+            <property name="text">
+             <string>Port:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxMercuryPort"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButtonPortRefresh">
+            <property name="text">
+             <string>Refresh</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupNetwork">
+         <property name="title">
+          <string>Connection</string>
+         </property>
+         <layout class="QGridLayout" name="gridNetwork">
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditWebSocketAddress"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelAddress">
+            <property name="text">
+             <string>Host / IP:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="checkBoxEnableTls"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditWebSocketPortNum"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelTls">
+            <property name="text">
+             <string>Enable TLS:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelPort">
+            <property name="text">
+             <string>Port:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAppearance">
+      <attribute name="title">
+       <string>Appearance</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutAppearance">
+       <item>
+        <widget class="QGroupBox" name="groupTheme">
+         <property name="title">
+          <string>Theme &amp; Layout</string>
+         </property>
+         <layout class="QGridLayout" name="gridTheme">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelTheme">
+            <property name="text">
+             <string>App Theme:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxAppTheme"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelHideMenu">
+            <property name="text">
+             <string>Hide Menu Bar:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="checkBoxHideMenu"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelAlwaysOnTop">
+            <property name="text">
+             <string>Always On Top:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="checkBoxAlwaysOnTop"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="labelScale">
+            <property name="text">
+             <string>App Scale Factor:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSlider" name="horizontalSliderAppScaleFactor">
+            <property name="minimum">
+             <number>50</number>
+            </property>
+            <property name="maximum">
+             <number>125</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLineEdit" name="lineEditScale">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="labelFont">
+            <property name="text">
+             <string>Font:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="pushButtonFont">
+            <property name="text">
+             <string>Font...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacerAppearance">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>150</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLayout">
+      <attribute name="title">
+       <string>Layout</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupStartupLayout">
+         <property name="title">
+          <string>Layout Startup</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayoutStartupLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelStartupLayout">
+            <property name="text">
+             <string>Startup layout:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxStartupLayout"/>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QLabel" name="labelStartupLayoutHint">
+            <property name="text">
+             <string>Choose which layout to load at startup. If the selected file is missing, the built-in default layout will be used.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupLaypotParm">
+         <property name="title">
+          <string>Parameters</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="labelLayoutColumns">
+            <property name="text">
+             <string>Number Columns:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxGridColumns">
+            <property name="minimum">
+             <number>2</number>
+            </property>
+            <property name="maximum">
+             <number>4</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacerLayout">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabUnits">
+      <attribute name="title">
+       <string>Units</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutUnits">
+       <item>
+        <widget class="QGroupBox" name="groupUnits">
+         <property name="title">
+          <string>Measurement Units</string>
+         </property>
+         <layout class="QGridLayout" name="gridUnits">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelU1">
+            <property name="text">
+             <string>Temperature Unit:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxUnitsTemp"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelU2">
+            <property name="text">
+             <string>Power Unit:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxUnitsPower"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelU3">
+            <property name="text">
+             <string>Reflected Unit:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxUnitsReflected"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabHamlib">
+      <attribute name="title">
+       <string>Hamlib</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayoutHamlib">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutHamlibTop">
+         <item>
+          <widget class="QLabel" name="labelHamlibRig">
+           <property name="text">
+            <string>Rig</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBoxHamlibRigModel"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonHamlibRefreshRigList">
+           <property name="text">
+            <string>Refresh</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonHamlibTest">
+           <property name="text">
+            <string>Test</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBoxHamlibEnabled">
+           <property name="text">
+            <string>Enabled</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerHamlib">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelHamlibStatus">
+           <property name="text">
+            <string>Not checked</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="tabWidgetHamlib">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tabHamlibSerial">
+          <attribute name="title">
+           <string>Serial</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayoutHamlibSerial">
+           <item>
+            <layout class="QFormLayout" name="formLayoutHamlibSerial">
+             <property name="labelAlignment">
+              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibSerialPort">
+               <property name="text">
+                <string>Port</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibSerialPort"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibSerialBaud">
+               <property name="text">
+                <string>Baud Rate</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibSerialBaud"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibDataBits">
+               <property name="text">
+                <string>Data Bits</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibDataBits"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibStopBits">
+               <property name="text">
+                <string>Stop Bits</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibStopBits"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibFlowControl">
+               <property name="text">
+                <string>Flow Control</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibFlowControl"/>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_comboBoxHamlibParity">
+               <property name="text">
+                <string>Parity</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QComboBox" name="comboBoxHamlibParity"/>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_spinBoxHamlibRigctldPort">
+               <property name="text">
+                <string>TCP Port</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QSpinBox" name="spinBoxHamlibRigctldPort">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>65535</number>
+               </property>
+               <property name="value">
+                <number>4532</number>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_checkBoxHamlibAutoStart">
+               <property name="text">
+                <string>Auto Start</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QCheckBox" name="checkBoxHamlibAutoStart">
+               <property name="text">
+                <string>Auto-start rigctld</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_widgetHamlibStartStop">
+               <property name="text">
+                <string>rigctld</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayoutHamlibStartStop">
+               <item>
+                <widget class="QPushButton" name="pushButtonHamlibStart">
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonHamlibStop">
+                 <property name="text">
+                  <string>Stop</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacerHamlibStartStop">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tabHamlibNetwork">
+          <attribute name="title">
+           <string>Network</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayoutHamlibNetwork">
+           <item>
+            <layout class="QFormLayout" name="formLayoutHamlibNetwork">
+             <property name="labelAlignment">
+              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_lineEditHamlibHost">
+               <property name="text">
+                <string>Host</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEditHamlibHost">
+               <property name="text">
+                <string>127.0.0.1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_spinBoxHamlibPort">
+               <property name="text">
+                <string>Port</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="spinBoxHamlibPort">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>65535</number>
+               </property>
+               <property name="value">
+                <number>4532</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tabHamlibHelp">
+          <attribute name="title">
+           <string>Help</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayoutHamlibHelp">
+           <item>
+            <layout class="QFormLayout" name="formLayoutHamlibBin">
+             <property name="labelAlignment">
+              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_widgetHamlibBin">
+               <property name="text">
+                <string>Hamlib bin</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayoutHamlibBin">
+               <item>
+                <widget class="QLineEdit" name="lineEditHamlibBinPath"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonHamlibBrowseBin">
+                 <property name="text">
+                  <string>Browse...</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="textBrowserHamlibHelp">
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Hamlib / rigctld (TCP)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RayPowerMeter talks to &lt;span style=&quot; font-weight:700;&quot;&gt;rigctld&lt;/span&gt; over TCP for Auto SWR sweeps.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Recommended:&lt;/span&gt; Use the Serial tab to start rigctld automatically after a successful Test.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Example (Windows): &lt;span style=&quot; font-family:'Courier New';&quot;&gt;rigctld.exe -m &amp;lt;MODEL_ID&amp;gt; -r COM3 -s 115200 -t 4532&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;To verify Hamlib is installed: &lt;span style=&quot; font-family:'Courier New';&quot;&gt;rigctl -V&lt;/span&gt; (capital V).&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Typical Hamlib bin folder (Windows): &lt;span style=&quot; font-family:'Courier New';&quot;&gt;C:\Program Files\hamlib-w64-4.6.5\bin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalButtonsMain">
+     <item>
+      <widget class="QPushButton" name="pushButtonLoad">
+       <property name="text">
+        <string>Re-load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonSave">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonClose">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

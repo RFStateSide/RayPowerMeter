@@ -1,0 +1,198 @@
+# ==================================================================
+# RayPowerMeter - Global .gitignore
+# ==================================================================
+
+# ------------------------------------------------------------------
+# PlatformIO / ESP32-S3 Firmware build outputs
+# ------------------------------------------------------------------
+.pio/
+.pioenvs/
+.pio/libdeps/
+.pio/build/
+.pio/test/
+.pio/.cache/
+.pio/main.cpp.o
+platformio.ini.save
+*.elf
+*.bin
+*.hex
+*.map
+*.uf2
+
+# ESP-IDF build cache (if used later)
+build/
+sdkconfig
+sdkconfig.old
+
+# Arduino core artifacts
+*.ino.cpp
+*.arduino_ci/
+*.cpp.o
+
+# ------------------------------------------------------------------
+# Visual Studio Code / JetBrains IDE's
+# ------------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+.vscode/ipch/
+
+# ------------------------------------------------------------------
+# Qt / CMake / Build outputs
+# ------------------------------------------------------------------
+build*/
+cmake-build-*/
+out/
+dist/
+*.user
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.creator.user
+*.autosave
+*.qmlc
+*.jsc
+*.moc
+*.qrc.dep
+*.qrc.cpp
+
+# Qt Installer Framework artifacts
+*.7z
+*.pkg
+*.iaq
+
+# Windows MinGW / MSVC temp files
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+
+# ------------------------------------------------------------------
+# CMake Temporary / Presets
+# ------------------------------------------------------------------
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+cmake_install.cmake
+*.cmake.api.json
+*.cmake
+*.ninja
+.ninja_deps
+.ninja_log
+
+# ------------------------------------------------------------------
+# Nextion display compiled assets
+# ------------------------------------------------------------------
+*.tft
+*.HMI.bak
+NextionUI/assets/fonts/*.zi
+NextionUI/assets/images/*.bin
+NextionUI/*.bak
+
+# ------------------------------------------------------------------
+# Python cache / virtual environments
+# ------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env/
+.venv/
+
+# ------------------------------------------------------------------
+# Rust (optional future tools)
+# ------------------------------------------------------------------
+target/
+
+# ------------------------------------------------------------------
+# KiCad Hardware Files
+# ------------------------------------------------------------------
+hardware/datasheets/
+*-backups/
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*auto_saved_files*
+*autosave*
+*.prl
+*.dcm
+*.net
+*cache*
+*fp-info-cache
+*freerouting.dsn
+*temp-freerouting.dsn
+*.tmp.png
+*.step
+*.stp
+
+# KiCad Production Outputs (re-generate as needed)
+*.gbr
+*.drl
+*.gbrjob
+*.pos
+*.html
+*.csv
+!/partitions_raypowermeter_ota_16mb.csv
+*.xls
+*.xlsx
+*.pdf
+*.rpt
+ibom.html
+pcbway_production/
+
+# ------------------------------------------------------------------
+# OS Junk (Windows/macOS/Linux)
+# ------------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Trashes
+.fseventsd
+Spotlight-V100
+
+# ------------------------------------------------------------------
+# Logs / Temp / Backup
+# ------------------------------------------------------------------
+*.bak
+*.tmp
+*.temp
+*.log
+*.old
+*.orig
+*.swp
+*.swo
+*~
+~*
+
+# ------------------------------------------------------------------
+# Releases / Packaging
+# ------------------------------------------------------------------
+releases/
+*.zip
+*.tar.gz
+*.AppImage
+*.dmg
+*.exe
+*.msi
+*.deb
+*.rpm
+
+# ------------------------------------------------------------------
+# Node / web tooling (future web config pages)
+# ------------------------------------------------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ------------------------------------------------------------------
+# Misc Project-Specific
+# ------------------------------------------------------------------
+docs/diagrams/generated/
+docs/calibration/data/*.json
+scripts/temp/

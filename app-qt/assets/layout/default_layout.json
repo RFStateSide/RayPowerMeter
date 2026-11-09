@@ -1,0 +1,155 @@
+{
+    "groupGridColumns": 2,
+    "groups": [
+        {
+            "binding": {
+                "couplerIndex": 0,
+                "type": "coupler"
+            },
+            "id": "coupler0_panel",
+            "layout": {
+                "columns": 2
+            },
+            "title": "Live Power Meter",
+            "widgets": [
+                {
+                    "colSpan": 2,
+                    "column": 0,
+                    "id": "c0_powerBar",
+                    "properties": {
+                        "margin": 0,
+                        "source": "Coupler0",
+                        "visible": true
+                    },
+                    "row": 0,
+                    "rowSpan": 1,
+                    "type": "PowerBar"
+                },
+                {
+                    "colSpan": 1,
+                    "column": 0,
+                    "id": "c0_forwardRef",
+                    "properties": {
+                        "margin": 0,
+                        "source": "Coupler0",
+                        "visible": true
+                    },
+                    "row": 1,
+                    "rowSpan": 1,
+                    "type": "ForwardRefPanel"
+                }
+            ]
+        },
+        {
+            "binding": {
+                "couplerIndex": 1,
+                "type": "coupler"
+            },
+            "id": "coupler1_panel",
+            "layout": {
+                "columns": 1
+            },
+            "title": "Coupler 2",
+            "widgets": [
+                {
+                    "colSpan": 2,
+                    "column": 0,
+                    "id": "c1_powerBar",
+                    "properties": {
+                        "margin": 0,
+                        "source": "Coupler1",
+                        "visible": true
+                    },
+                    "row": 0,
+                    "rowSpan": 1,
+                    "type": "PowerBar"
+                }
+            ]
+        },
+        {
+            "binding": {
+                "couplerIndex": 1,
+                "type": "coupler"
+            },
+            "id": "coupler1_panel_group_1",
+            "layout": {
+                "columns": 1
+            },
+            "title": "Amplifier Gain",
+            "widgets": [
+                {
+                    "colSpan": 1,
+                    "column": 0,
+                    "id": "coupler1_panel_group_1_GainWidget",
+                    "properties": {
+                        "margin": 0,
+                        "rfInSource": "Coupler0",
+                        "rfOutSource": "Coupler1",
+                        "source": "Coupler1",
+                        "visible": true
+                    },
+                    "row": 0,
+                    "rowSpan": 1,
+                    "type": "GainWidget"
+                }
+            ]
+        },
+        {
+            "binding": {
+                "couplerIndex": 1,
+                "type": "coupler"
+            },
+            "id": "coupler1_panel_group",
+            "layout": {
+                "columns": 1
+            },
+            "title": "Amplifier Bias",
+            "widgets": [
+                {
+                    "colSpan": 1,
+                    "column": 0,
+                    "id": "coupler1_panel_group_AuxVoltage",
+                    "properties": {
+                        "label": "Voltage",
+                        "margin": 0,
+                        "source": "Aux0",
+                        "visible": true
+                    },
+                    "row": 0,
+                    "rowSpan": 1,
+                    "type": "AuxVoltage"
+                }
+            ]
+        },
+        {
+            "binding": {
+                "couplerIndex": 1,
+                "type": "coupler"
+            },
+            "id": "coupler1_panel_group_1_group",
+            "layout": {
+                "columns": 1
+            },
+            "title": "Test Vert Bar",
+            "widgets": [
+                {
+                    "colSpan": 1,
+                    "column": 0,
+                    "id": "coupler1_panel_group_1_group_PowerBarVert",
+                    "properties": {
+                        "margin": 0,
+                        "meterMode": "Live",
+                        "showTickLabels": true,
+                        "showTicks": true,
+                        "source": "Coupler1",
+                        "visible": true
+                    },
+                    "row": 0,
+                    "rowSpan": 2,
+                    "type": "PowerBarVert"
+                }
+            ]
+        }
+    ],
+    "schemaVersion": 1
+}

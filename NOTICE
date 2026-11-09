@@ -1,0 +1,25 @@
+RayPowerMeter — RF StateSide LLC
+Copyright (c) 2025–2026 RF StateSide LLC.
+SPDX-License-Identifier: LGPL-3.0-only
+
+Original RayPowerMeter Qt application and ESP32-S3 firmware contributions are
+licensed under GNU Lesser General Public License version 3 only. See LICENSE
+and the incorporated GNU GPL version 3 text in LICENSES/GPL-3.0.txt. This
+notice grants no additional rights to third-party code, artwork, fonts,
+hardware design files or marks. See docs/licensing.md and docs/asset-provenance.md.
+
+Public Engineering Reference — AS-IS. No engineering performance warranty,
+certification, guaranteed RF power handling, calibration accuracy or fitness
+for safety-critical use is claimed. Users are responsible for calibration,
+safe integration and evaluation of their implementations. The license governs
+its warranty and liability terms.
+
+Original engineering by Ray Faucher (KB1SO), RF StateSide LLC. ChatGPT/Codex
+assisted with review, corrections, tests and release preparation. Ray Faucher
+and ChatGPT created the five Qt graphics collaboratively. Their source-package
+clearance is recorded separately in docs/asset-provenance.md.
+
+2026-11-09 release preparation. Preserved the measured calibration baseline,
+reconciled the software notices, made Wi-Fi and HTTP an isolated-laboratory
+build opt-in, and disabled historical OTA in the supplied build profiles.
+This preparation does not establish new physical validation.

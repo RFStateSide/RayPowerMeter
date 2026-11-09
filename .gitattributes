@@ -1,0 +1,3 @@
+# Preserve the upstream FSF text byte for byte.
+LICENSE -text whitespace=-blank-at-eol
+LICENSES/GPL-3.0.txt -text whitespace=-blank-at-eol
